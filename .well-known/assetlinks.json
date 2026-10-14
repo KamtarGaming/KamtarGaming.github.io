@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "fr.badgeage.local",
+      "sha256_cert_fingerprints": [
+        "00:1B:EE:BE:C0:59:C5:AC:1B:B5:C9:BD:96:E2:E4:AE:81:73:E0:82:3E:30:97:20:AF:65:D8:8D:FF:AA:49:A4"
+      ]
+    }
+  }
+]
