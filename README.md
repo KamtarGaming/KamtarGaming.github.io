@@ -30,3 +30,5 @@ Une sortie sans scan de reprise reste affichée comme une sortie en cours pour l
 Le menu **Importer une feuille** accepte les photos et les scans, les PDF de plusieurs pages, les fichiers Excel `.xlsx` ou `.xlsm`, les CSV et les fichiers texte. Les PDF scannés sont analysés page par page sur le téléphone. Pour Excel, la colonne **Payé Jour** est prioritaire et les colonnes **Effectifs Jour** et **HS normale semaine** ne sont pas importées à sa place. L'ancien format binaire `.xls` doit être enregistré en `.xlsx`.
 
 Le menu **Exporter l'agenda** enregistre un CSV local détaillé avec les pointages, les durées importées, l'objectif de chaque journée, son impact sur le solde, le cumul et les jours restant à valider. Les semaines partielles comptent toutes les journées réellement renseignées ; une journée absente reste neutre jusqu'à sa validation.
+
+Le solde est recalculé directement depuis les journées enregistrées, sans conserver d'ancien ajustement interne. Samedi et dimanche sont toujours neutres.
