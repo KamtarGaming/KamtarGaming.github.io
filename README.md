@@ -11,6 +11,8 @@ Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
 Le badge ne contient pas les heures, ni l'application elle-même. Il contient seulement l'URL de téléchargement et de lancement. Un NTAG216 ne peut pas contenir un APK Android, qui est bien plus gros. Les pointages restent uniquement dans l'espace privé de l'application sur le téléphone.
 
+Le menu **Lier un NFC** permet d'ajouter d'autres badges ou tags sans supprimer ceux déjà associés et sans créer de pointage pendant l'association.
+
 ## Calcul du solde
 
 Le solde commence à zéro. L'application ne contient aucune date, durée ou référence préremplie. Si l'entreprise fournit un cumul **HS normale semaine**, il peut être saisi manuellement comme **solde officiel de référence** avec sa date de fin. Les heures antérieures restent visibles dans l'archive mais ne sont alors plus recalculées.
