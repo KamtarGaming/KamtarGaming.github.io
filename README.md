@@ -47,6 +47,6 @@ Depuis une archive, le bouton Retour ouvre l'agenda ; depuis l'agenda, Retour ra
 
 Le menu **Importer une feuille** accepte les fichiers Excel `.xlsx` ou `.xlsm`, les CSV et les fichiers texte. Les photos et les PDF scannés sont volontairement exclus : ils demandent un OCR, qui peut déplacer une valeur d'une ligne à l'autre. Pour Excel, la colonne **Payé Jour** est prioritaire et les colonnes **Effectifs Jour** et **HS normale semaine** ne sont jamais importées à sa place. L'ancien format binaire `.xls` doit être enregistré en `.xlsx`.
 
-Le menu **Exporter l'agenda** enregistre un CSV local détaillé avec la référence officielle, les pointages, les durées importées, l'objectif de chaque journée, son impact après la référence, le cumul et les jours restant à valider.
+Le menu **Exporter l'agenda** enregistre un CSV local détaillé avec la référence officielle, les pointages, les durées importées, l'objectif de chaque journée, son impact après la référence, le cumul et les jours restant à valider. Ce même CSV peut être choisi dans **Importer une feuille** pour restaurer intégralement l'agenda après une réinstallation.
 
 Toutes les données restent locales : aucun compte et aucune synchronisation.

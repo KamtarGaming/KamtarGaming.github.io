@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "fr.badgeage.local",
       "sha256_cert_fingerprints": [
-        "00:1B:EE:BE:C0:59:C5:AC:1B:B5:C9:BD:96:E2:E4:AE:81:73:E0:82:3E:30:97:20:AF:65:D8:8D:FF:AA:49:A4"
+        "00:1B:EE:BE:C0:59:C5:AC:1B:B5:C9:BD:96:E2:E4:AE:81:73:E0:82:3E:30:97:20:AF:65:D8:8D:FF:AA:49:A4",
+        "9C:F3:57:3F:6B:AD:28:DB:2E:57:32:98:DF:E8:4A:A2:9C:2F:6D:26:30:96:3E:26:76:09:23:C8:95:CA:4C:CE"
       ]
     }
   }
