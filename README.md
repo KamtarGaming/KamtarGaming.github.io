@@ -13,17 +13,17 @@ Le badge ne contient pas les heures, ni l'application elle-même. Il contient se
 
 ## Calcul du solde
 
-Le relevé de l'entreprise fait foi : son cumul **HS normale semaine** est saisi comme **solde officiel de référence** avec sa date de fin. Les heures historiques avant cette date restent visibles dans l'archive, mais ne sont jamais recalculées par l'application, car l'entreprise applique des règles qui ne figurent pas toutes dans les colonnes quotidiennes.
+Le solde commence à zéro. L'application ne contient aucune date, durée ou référence préremplie. Si l'entreprise fournit un cumul **HS normale semaine**, il peut être saisi manuellement comme **solde officiel de référence** avec sa date de fin. Les heures antérieures restent visibles dans l'archive mais ne sont alors plus recalculées.
 
 Après cette date, l'application ajoute seulement les écarts des journées renseignées :
 
 - lundi : objectif de 7 h ; mardi à vendredi : 8 h ; une semaine complète correspond donc à 39 h ;
-- une journée enregistrée ajoute sa durée moins son objectif ;
+- une journée enregistrée ajoute exactement `durée travaillée - objectif du jour` ;
 - une semaine incomplète compte immédiatement les jours renseignés ; une journée absente est neutre tant qu'elle n'est pas validée ;
 - une absence peut être laissée neutre ou marquée « à déduire » ; dans ce dernier cas, l'objectif du jour est retiré ;
 - samedi et dimanche ne modifient jamais le solde.
 
-Dans **Options → Solde de référence**, on peut saisir ou corriger le cumul officiel et la date jusqu'à laquelle il s'applique.
+Dans **Options → Solde de référence**, on peut saisir, corriger ou supprimer ce cumul facultatif.
 
 ## Pointages NFC
 
