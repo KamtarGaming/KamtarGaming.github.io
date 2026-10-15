@@ -32,6 +32,7 @@ Dans **Options → Solde de référence**, on peut saisir, corriger ou supprimer
 - scan suivant : reprise, qui termine l'interruption ;
 - les scans suivants alternent de la même façon ;
 - une coupure de plus de 45 minutes, entièrement comprise entre 11 h et 15 h, est nommée « interruption de midi » ;
+- une coupure commencée après 16 h devient automatiquement une sortie dès qu'elle dépasse 2 h ;
 - lorsqu'une autre pause se termine, **Hors taxe** permet de retirer ses deux scans : elle disparaît du relevé et du compteur de pauses ;
 - à partir de 6 h travaillées, 30 minutes de pauses payées sont incluses dans la journée et ne modifient jamais le solde de récupération, même si elles durent plus longtemps ;
 - sans pointage détaillé, l'application suppose une entrée à 8 h, deux pauses payées de 15 minutes à 10 h et 15 h, ainsi qu'une interruption de midi de 12 h à 13 h ;
