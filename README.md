@@ -24,6 +24,7 @@ Après cette date, l'application ajoute seulement les écarts des journées rens
 - samedi et dimanche ne modifient jamais le solde.
 
 Dans **Options → Solde de référence**, on peut saisir, corriger ou supprimer ce cumul facultatif.
+Sur la page principale, un glissement vers le bas recalcule le solde et actualise immédiatement l'affichage.
 
 ## Pointages NFC
 
