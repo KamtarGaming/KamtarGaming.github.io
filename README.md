@@ -42,6 +42,8 @@ Lorsqu'une période de travail est ouverte, elle indique aussi l'heure de dépar
 - à partir de 6 h travaillées, 30 minutes de pauses payées sont incluses dans la journée et ne modifient jamais le solde de récupération, même si elles durent plus longtemps ;
 - sans pointage détaillé, l'application suppose une entrée à 8 h, deux pauses payées de 15 minutes à 10 h et 15 h, ainsi qu'une interruption de midi de 12 h à 13 h ;
 - si aucune pause payée n'a été badgée le jour ouvré précédent, l'application demande si elle a été prise sans badge ou si ses 30 minutes doivent être reportées sur la journée actuelle ;
+- pendant une pause, une notification persistante affiche le compteur et l'heure de reprise prévue jusque sur l'écran verrouillé ;
+- pendant la minute qui suit un pointage NFC, **Annuler le dernier scan** permet de supprimer immédiatement un badgeage accidentel.
 
 Une sortie sans scan de reprise reste affichée comme une sortie en cours pour la journée. Les données sont enregistrées localement via les préférences privées Android, sans compte ni synchronisation.
 
