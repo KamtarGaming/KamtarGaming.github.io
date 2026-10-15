@@ -11,7 +11,21 @@ Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
 Le badge ne contient pas les heures, ni l'application elle-même. Il contient seulement l'URL de téléchargement et de lancement. Un NTAG216 ne peut pas contenir un APK Android, qui est bien plus gros. Les pointages restent uniquement dans l'espace privé de l'application sur le téléphone.
 
-## Règles de calcul de cette première version
+## Calcul du solde
+
+Le relevé de l'entreprise fait foi : son cumul **HS normale semaine** est saisi comme **solde officiel de référence** avec sa date de fin. Les heures historiques avant cette date restent visibles dans l'archive, mais ne sont jamais recalculées par l'application, car l'entreprise applique des règles qui ne figurent pas toutes dans les colonnes quotidiennes.
+
+Après cette date, l'application ajoute seulement les écarts des journées renseignées :
+
+- lundi : objectif de 7 h ; mardi à vendredi : 8 h ; une semaine complète correspond donc à 39 h ;
+- une journée enregistrée ajoute sa durée moins son objectif ;
+- une semaine incomplète compte immédiatement les jours renseignés ; une journée absente est neutre tant qu'elle n'est pas validée ;
+- une absence peut être laissée neutre ou marquée « à déduire » ; dans ce dernier cas, l'objectif du jour est retiré ;
+- samedi et dimanche ne modifient jamais le solde.
+
+Dans **Options → Solde de référence**, on peut saisir ou corriger le cumul officiel et la date jusqu'à laquelle il s'applique.
+
+## Pointages NFC
 
 - premier scan de la journée : entrée ;
 - scan suivant : sortie/interruption et lancement du compteur visuel ;
@@ -21,14 +35,13 @@ Le badge ne contient pas les heures, ni l'application elle-même. Il contient se
 - à partir de 6 h travaillées, 30 minutes de pauses payées sont incluses dans la journée et ne modifient jamais le solde de récupération, même si elles durent plus longtemps ;
 - sans pointage détaillé, l'application suppose une entrée à 8 h, deux pauses payées de 15 minutes à 10 h et 15 h, ainsi qu'une interruption de midi de 12 h à 13 h ;
 - si aucune pause payée n'a été badgée le jour ouvré précédent, l'application demande si elle a été prise sans badge ou si ses 30 minutes doivent être reportées sur la journée actuelle ;
-- lundi : objectif de 7 h ; mardi à vendredi : objectif de 8 h ; total de référence : 39 h par semaine.
 
 Une sortie sans scan de reprise reste affichée comme une sortie en cours pour la journée. Les données sont enregistrées localement via les préférences privées Android, sans compte ni synchronisation.
 
 ## Import des relevés
 
-Le menu **Importer une feuille** accepte les photos et les scans, les PDF de plusieurs pages, les fichiers Excel `.xlsx` ou `.xlsm`, les CSV et les fichiers texte. Les PDF scannés sont analysés page par page sur le téléphone. Pour Excel, la colonne **Payé Jour** est prioritaire et les colonnes **Effectifs Jour** et **HS normale semaine** ne sont pas importées à sa place. L'ancien format binaire `.xls` doit être enregistré en `.xlsx`.
+Le menu **Importer une feuille** accepte les fichiers Excel `.xlsx` ou `.xlsm`, les CSV et les fichiers texte. Les photos et les PDF scannés sont volontairement exclus : ils demandent un OCR, qui peut déplacer une valeur d'une ligne à l'autre. Pour Excel, la colonne **Payé Jour** est prioritaire et les colonnes **Effectifs Jour** et **HS normale semaine** ne sont jamais importées à sa place. L'ancien format binaire `.xls` doit être enregistré en `.xlsx`.
 
-Le menu **Exporter l'agenda** enregistre un CSV local détaillé avec les pointages, les durées importées, l'objectif de chaque journée, son impact sur le solde, le cumul et les jours restant à valider. Les semaines partielles comptent toutes les journées réellement renseignées ; une journée absente reste neutre jusqu'à sa validation.
+Le menu **Exporter l'agenda** enregistre un CSV local détaillé avec la référence officielle, les pointages, les durées importées, l'objectif de chaque journée, son impact après la référence, le cumul et les jours restant à valider.
 
-Le solde est recalculé directement depuis les journées enregistrées, sans conserver d'ancien ajustement interne. Samedi et dimanche sont toujours neutres.
+Toutes les données restent locales : aucun compte et aucune synchronisation.
