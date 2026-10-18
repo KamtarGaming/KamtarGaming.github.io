@@ -13,6 +13,8 @@ Le badge ne contient pas les heures, ni l'application elle-même. Il contient se
 
 Le menu **Lier un NFC** permet d'ajouter d'autres badges ou tags sans supprimer ceux déjà associés et sans créer de pointage pendant l'association.
 
+Sur Android récent, une URL NFC seule peut être présentée comme une notification à toucher. Le menu **Activer l'ouverture NFC directe** réécrit le tag avec le lien GitHub et un Android Application Record propre à Mon Badgeage. Cette opération n'est nécessaire qu'une fois par tag. Lorsque l'application est déjà visible, la distribution NFC prioritaire intercepte également le badge depuis la journée actuelle, une archive ou l'agenda.
+
 ## Calcul du solde
 
 Le solde commence à zéro. L'application ne contient aucune date, durée ou référence préremplie. Si l'entreprise fournit un cumul **HS normale semaine**, il peut être saisi manuellement comme **solde officiel de référence** avec sa date de fin. Les heures antérieures restent visibles dans l'archive mais ne sont alors plus recalculées.
