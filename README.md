@@ -15,7 +15,7 @@ Le menu **Lier un tag NFC** permet d'ajouter d'autres badges ou tags sans suppri
 
 Sur Android récent, une URL NFC seule peut être présentée comme une notification à toucher. Le menu **Réécrire le tag NFC** écrit le lien GitHub et un Android Application Record propre à Mon Badgeage, puis relit le tag et vérifie la présence des deux enregistrements avant de confirmer la réussite. Cette opération n'est nécessaire qu'une fois par tag. Lorsque l'application est déjà visible, le mode lecteur NFC direct intercepte le badge depuis la journée actuelle, une archive ou l'agenda, même si l'écran est resté ouvert longtemps. Si Android intercepte le lien lorsque l'application est fermée, la page propose d'abord **Ouvrir Mon Badgeage**, puis le téléchargement de l'APK si l'application n'est pas installée.
 
-Le menu **Scanner manuellement** enregistre le même événement que le badge à l'heure actuelle après confirmation. Chaque journée affiche sa provenance : uniquement NFC, saisie manuelle, mélange des deux ou heures modifiées. Les modifications saisies sont validées explicitement avant de quitter le mode d'édition.
+Le menu **Scanner manuellement** enregistre le même événement que le badge à l'heure actuelle après confirmation. Seule une journée composée exclusivement de scans NFC restés intacts affiche **Journée badgée uniquement par NFC**. Un import texte ou Excel, une saisie manuelle, une heure ajoutée par l'application ou la correction d'un scan affiche **Journée modifiée**, avec le détail de sa provenance. Les modifications saisies sont validées explicitement avant de quitter le mode d'édition.
 
 ## Calcul du solde
 
