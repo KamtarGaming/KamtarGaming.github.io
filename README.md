@@ -13,9 +13,9 @@ Le badge ne contient pas les heures, ni l'application elle-même. Il contient se
 
 Le menu **Lier un tag NFC** permet d'ajouter d'autres badges ou tags sans supprimer ceux déjà associés et sans créer de pointage pendant l'association.
 
-Sur Android récent, une URL NFC seule peut être présentée comme une notification à toucher. Le menu **Réécrire le tag NFC** écrit le lien GitHub et un Android Application Record propre à Mon Badgeage, puis relit le tag et vérifie la présence des deux enregistrements avant de confirmer la réussite. Cette opération n'est nécessaire qu'une fois par tag. Lorsque l'application est déjà visible, le mode lecteur NFC direct intercepte le badge depuis la journée actuelle, une archive ou l'agenda, même si l'écran est resté ouvert longtemps. Si Android intercepte le lien lorsque l'application est fermée, la page propose d'abord **Ouvrir Mon Badgeage**, puis le téléchargement de l'APK si l'application n'est pas installée.
+Sur Android récent, une URL NFC seule peut être présentée comme une notification à toucher. Le menu **Réécrire le tag NFC** écrit le lien GitHub et un Android Application Record propre à Mon Badgeage, relit le tag, vérifie la présence des deux enregistrements puis lie ce tag à l'application avant de confirmer la réussite. Cette opération n'est nécessaire qu'une fois par tag. Lorsque l'application est déjà visible, le mode lecteur NFC direct intercepte le badge depuis la journée actuelle, une archive ou l'agenda, même si l'écran est resté ouvert longtemps. Si Android intercepte le lien lorsque l'application est fermée, la page propose d'abord **Ouvrir Mon Badgeage**, puis le téléchargement de l'APK si l'application n'est pas installée.
 
-Le menu **Scanner manuellement** enregistre le même événement que le badge à l'heure actuelle après confirmation. Seule une journée composée exclusivement de scans NFC restés intacts affiche **Journée badgée uniquement par NFC**. Un import texte ou Excel, une saisie manuelle, une heure ajoutée par l'application ou la correction d'un scan affiche **Journée modifiée**, avec le détail de sa provenance. Les modifications saisies sont validées explicitement avant de quitter le mode d'édition.
+Le menu **Badger manuellement** enregistre le même événement que le badge à l'heure actuelle après confirmation. Seule une journée composée exclusivement de scans NFC restés intacts affiche **Journée badgée uniquement par NFC**. Un import texte ou Excel, une saisie manuelle, une heure ajoutée par l'application ou la correction d'un scan affiche **Journée modifiée**, avec le détail de sa provenance. Les modifications saisies sont validées explicitement avant de quitter le mode d'édition.
 
 ## Calcul du solde
 
@@ -29,7 +29,7 @@ Après cette date, l'application ajoute seulement les écarts des journées rens
 - une absence peut être laissée neutre ou marquée « à déduire » ; dans ce dernier cas, l'objectif du jour est retiré ;
 - samedi et dimanche ne modifient jamais le solde.
 
-Dans **Options → Solde de référence**, on peut saisir, corriger ou supprimer ce cumul facultatif.
+Dans **Options → Définir le solde de référence**, on peut saisir, corriger ou supprimer ce cumul facultatif.
 Sur la page principale, un glissement vers le bas affiche brièvement un indicateur central, recalcule le solde et actualise l'affichage. Un glissement horizontal parcourt les journées enregistrées avec une transition latérale : vers la droite pour remonter dans l'historique, vers la gauche pour revenir vers aujourd'hui.
 La page principale affiche le total de la semaine puis les heures travaillées du mois en cours.
 Lorsqu'une période de travail est ouverte, elle indique aussi l'heure de départ estimée pour atteindre l'objectif du jour. Cette heure tient compte des pointages déjà effectués et de l'interruption de midi.
@@ -61,8 +61,8 @@ Chaque page d'archive indique le solde de récupération atteint à la fin de ce
 
 ## Import des relevés
 
-Le menu **Importer une feuille** accepte les fichiers Excel `.xlsx` ou `.xlsm`, les CSV et les fichiers texte. Les photos et les PDF scannés sont volontairement exclus : ils demandent un OCR, qui peut déplacer une valeur d'une ligne à l'autre. Pour Excel, la colonne **Payé Jour** est prioritaire et les colonnes **Effectifs Jour** et **HS normale semaine** ne sont jamais importées à sa place. L'ancien format binaire `.xls` doit être enregistré en `.xlsx`.
+Le menu **Importer l'agenda** accepte les fichiers Excel `.xlsx` ou `.xlsm`, les CSV et les fichiers texte. Les photos et les PDF scannés sont volontairement exclus : ils demandent un OCR, qui peut déplacer une valeur d'une ligne à l'autre. Pour Excel, la colonne **Payé Jour** est prioritaire et les colonnes **Effectifs Jour** et **HS normale semaine** ne sont jamais importées à sa place. L'ancien format binaire `.xls` doit être enregistré en `.xlsx`.
 
-Le menu **Exporter l'agenda** enregistre un CSV local détaillé avec la référence officielle, les pointages, les durées importées, l'objectif de chaque journée, son impact après la référence, le cumul et les jours restant à valider. Ce même CSV peut être choisi dans **Importer une feuille** pour restaurer intégralement l'agenda après une réinstallation.
+Le menu **Exporter l'agenda** enregistre un CSV local détaillé avec la référence officielle, les pointages, les durées importées, l'objectif de chaque journée, son impact après la référence, le cumul et les jours restant à valider. Ce même CSV peut être choisi dans **Importer l'agenda** pour restaurer intégralement l'agenda après une réinstallation.
 
 Toutes les données restent locales : aucun compte et aucune synchronisation.
