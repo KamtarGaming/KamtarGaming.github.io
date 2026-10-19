@@ -57,6 +57,14 @@ Depuis une archive, le bouton Retour ouvre l'agenda ; depuis l'agenda, Retour ra
 
 L'accueil présente les heures de la semaine, le solde de récupération, le total du mois et les pointages dans des blocs sobres sur fond noir. Le menu Options forme un panneau noir unique, avec une croix de fermeture intégrée et des groupes séparés par des lignes fines. La liste reste défilable sur les petits écrans.
 
+## Analyses et congés
+
+Toucher le solde, ou choisir **Analyses et bilan**, ouvre l'évolution hebdomadaire du solde, le détail « référence + écarts des journées terminées », le bilan mensuel, la prévision du vendredi et les jours restant à vérifier. Le bilan de la semaine affiche les heures réalisées, l'objectif ajusté et le temps restant pour atteindre les 39 heures.
+
+**Définir des congés** permet de marquer une date ou une période, avec congé payé ou non payé, entier ou en demi-journée. Ces congés sont recensés dans le bilan mensuel et restent neutres pour le solde de récupération. L'application conserve aussi les corrections d'heures ; l'écran d'analyses permet d'annuler la dernière correction. Lors d'un import, chaque date déjà renseignée affiche la durée existante, la durée du fichier et l'écart avant validation.
+
+Pendant la modification d'une journée, la croix à côté d'une heure supprime ce seul pointage après confirmation. Le bouton **Réinitialiser cette journée** efface tous les pointages, la durée importée et la validation de la date ouverte, y compris dans une archive.
+
 Pendant la modification d'une journée, l'écran se redimensionne avec le clavier et fait défiler automatiquement le champ actif pour que l'heure saisie reste visible, y compris en bas d'une archive.
 
 Chaque page d'archive indique le solde de récupération atteint à la fin de cette journée. Pour une date antérieure au solde de référence, l'application le reconstitue en remontant les écarts journaliers connus depuis cette référence.
