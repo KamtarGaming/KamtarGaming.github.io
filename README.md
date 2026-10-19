@@ -55,6 +55,8 @@ Une sortie sans scan de reprise reste affichée comme une sortie en cours pour l
 
 Depuis une archive, le bouton Retour ouvre l'agenda ; depuis l'agenda, Retour ramène à la journée actuelle. L'icône d'agenda reste accessible directement en haut des pages de journée.
 
+L'accueil présente les heures de la semaine, le solde de récupération, le total du mois et les pointages dans des blocs sobres sur fond noir. Le menu Options forme un panneau noir unique, avec une croix de fermeture intégrée et des groupes séparés par des lignes fines. La liste reste défilable sur les petits écrans.
+
 Pendant la modification d'une journée, l'écran se redimensionne avec le clavier et fait défiler automatiquement le champ actif pour que l'heure saisie reste visible, y compris en bas d'une archive.
 
 Chaque page d'archive indique le solde de récupération atteint à la fin de cette journée. Pour une date antérieure au solde de référence, l'application le reconstitue en remontant les écarts journaliers connus depuis cette référence.
