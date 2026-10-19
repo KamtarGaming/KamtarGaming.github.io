@@ -11,9 +11,11 @@ Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
 Le badge ne contient pas les heures, ni l'application elle-même. Il contient seulement l'URL de téléchargement et de lancement. Un NTAG216 ne peut pas contenir un APK Android, qui est bien plus gros. Les pointages restent uniquement dans l'espace privé de l'application sur le téléphone.
 
-Le menu **Lier un NFC** permet d'ajouter d'autres badges ou tags sans supprimer ceux déjà associés et sans créer de pointage pendant l'association.
+Le menu **Lier un tag NFC** permet d'ajouter d'autres badges ou tags sans supprimer ceux déjà associés et sans créer de pointage pendant l'association.
 
-Sur Android récent, une URL NFC seule peut être présentée comme une notification à toucher. Le menu **Réécrire le tag** écrit le lien GitHub et un Android Application Record propre à Mon Badgeage, puis relit le tag et vérifie la présence des deux enregistrements avant de confirmer la réussite. Cette opération n'est nécessaire qu'une fois par tag. Lorsque l'application est déjà visible, la distribution NFC prioritaire intercepte également le badge depuis la journée actuelle, une archive ou l'agenda.
+Sur Android récent, une URL NFC seule peut être présentée comme une notification à toucher. Le menu **Réécrire le tag NFC** écrit le lien GitHub et un Android Application Record propre à Mon Badgeage, puis relit le tag et vérifie la présence des deux enregistrements avant de confirmer la réussite. Cette opération n'est nécessaire qu'une fois par tag. Lorsque l'application est déjà visible, la distribution NFC prioritaire intercepte également le badge depuis la journée actuelle, une archive ou l'agenda.
+
+Le menu **Scanner manuellement** enregistre le même événement que le badge à l'heure actuelle après confirmation. Chaque journée affiche sa provenance : uniquement NFC, saisie manuelle, mélange des deux ou heures modifiées. Les modifications saisies sont validées explicitement avant de quitter le mode d'édition.
 
 ## Calcul du solde
 
