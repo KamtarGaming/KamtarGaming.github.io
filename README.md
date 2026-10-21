@@ -2,6 +2,14 @@
 
 Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
+## Version 2.0
+
+L'interface et le moteur métier de la version 2.0 sont écrits en C avec
+AromaUI. Il n'y a plus de code Kotlin. Un petit pont Java reste nécessaire pour
+les services fournis par Android : activité native, NFC/NDEF, notifications,
+clavier, sélection de fichiers et installation des mises à jour. Les calculs,
+les écrans et les règles de pointage restent dans le moteur C.
+
 ## Fonctionnement
 
 1. Publier d'abord la page GitHub Pages préparée pour `kamtargaming.github.io`, puis écrire son URL dans le NTAG216 avec NFC Tools.
@@ -42,11 +50,12 @@ Lorsqu'une période de travail est ouverte, elle indique aussi l'heure de dépar
 - les scans suivants alternent de la même façon ;
 - une coupure de plus de 45 minutes, entièrement comprise entre 11 h et 15 h, est nommée « interruption de midi » ;
 - une coupure commencée après 16 h devient automatiquement une sortie dès qu'elle dépasse 2 h ;
+- une nouvelle sortie devient immédiatement la fin de journée lorsque l'objectif de 7 h le lundi ou 8 h du mardi au vendredi est atteint et qu'au moins 26 des 30 minutes de pauses payées ont déjà été prises ;
 - lorsqu'une autre pause se termine, **Hors taxe** permet de retirer ses deux scans : elle disparaît du relevé et du compteur de pauses ;
 - à partir de 6 h travaillées, 30 minutes de pauses payées sont incluses dans la journée et ne modifient jamais le solde de récupération, même si elles durent plus longtemps ;
-- sans pointage détaillé, l'application suppose une entrée à 8 h, deux pauses payées de 15 minutes à 10 h et 15 h, ainsi qu'une interruption de midi de 12 h à 13 h ;
+- aucune interruption de midi n'est inventée lorsqu'elle n'a pas été badgée ;
 - si aucune pause payée n'a été badgée le jour ouvré précédent, l'application demande si elle a été prise sans badge ou si ses 30 minutes doivent être reportées sur la journée actuelle ;
-- pendant une pause, une notification persistante affiche le compteur actualisé chaque seconde et l'heure de reprise prévue jusque sur l'écran verrouillé ;
+- pendant une pause payée, une notification persistante affiche le compteur actualisé chaque seconde et calcule à la seconde près le temps encore disponible ainsi que l'heure de reprise en déduisant les pauses déjà prises ; une interruption commencée entre 11 h et 15 h n'annonce pas arbitrairement un retour dans 30 minutes, et une sortie n'affiche aucune notification de pause ;
 - pendant la minute qui suit un pointage NFC, **Annuler le dernier scan** permet de supprimer immédiatement un badgeage accidentel.
 - chaque scan affiche une confirmation centrale colorée — entrée, pause, reprise ou sortie — accompagnée d'une vibration propre à l'action ;
 - le soir, si la dernière alternance est restée ouverte, une notification signale la sortie probablement oubliée. L'application propose alors une heure calculée, modifiable avant validation.
