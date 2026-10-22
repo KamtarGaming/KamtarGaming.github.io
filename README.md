@@ -2,18 +2,19 @@
 
 Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
-## Version 2.0.2
+## Version 2.0.3
 
-L'interface et le moteur métier de la version 2.0.2 sont écrits en C avec
+L'interface et le moteur métier de la version 2.0.3 sont écrits en C avec
 AromaUI. Il n'y a plus de code Kotlin. Un petit pont Java reste nécessaire pour
 les services fournis par Android : activité native, NFC/NDEF, notifications,
 clavier, sélection de fichiers et installation des mises à jour. Les calculs,
 les écrans et les règles de pointage restent dans le moteur C.
 
-La version 2.0.2 place tous les écrans sous la barre d'état et la caméra, aère
-l'agenda et corrige la restauration des CSV exportés par l'ancienne application,
-y compris ceux qui commencent par une marque UTF-8. Le retour du sélecteur de
-fichiers est conservé jusqu'à sa prise en compte par le moteur C.
+La version 2.0.3 garde les boutons de validation et d'annulation visibles pendant
+un import, tandis que la liste des journées défile séparément. La navigation
+horizontale par glissement a été retirée ; l'agenda et les flèches servent à
+changer de journée. Elle conserve aussi les corrections de zone sûre et de CSV
+de la version précédente.
 
 ## Fonctionnement
 
@@ -43,7 +44,7 @@ Après cette date, l'application ajoute seulement les écarts des journées rens
 - samedi et dimanche ne modifient jamais le solde.
 
 Dans **Options → Définir le solde de référence**, on peut saisir, corriger ou supprimer ce cumul facultatif.
-Sur la page principale, un glissement vers le bas affiche brièvement un indicateur central, recalcule le solde et actualise l'affichage. Un glissement horizontal parcourt les journées enregistrées avec une transition latérale : vers la droite pour remonter dans l'historique, vers la gauche pour revenir vers aujourd'hui.
+Sur la page principale, un glissement vers le bas affiche brièvement un indicateur central, recalcule le solde et actualise l'affichage. Les journées enregistrées se parcourent depuis l'agenda ou avec les flèches visibles dans une archive.
 La page principale affiche le total de la semaine puis les heures travaillées du mois en cours.
 Lorsqu'une période de travail est ouverte, elle indique aussi l'heure de départ estimée pour atteindre l'objectif du jour. Cette heure tient compte des pointages déjà effectués et de l'interruption de midi.
 
