@@ -2,19 +2,20 @@
 
 Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
-## Version 2.0.3
+## Version 2.0.4
 
-L'interface et le moteur métier de la version 2.0.3 sont écrits en C avec
+L'interface et le moteur métier de la version 2.0.4 sont écrits en C avec
 AromaUI. Il n'y a plus de code Kotlin. Un petit pont Java reste nécessaire pour
 les services fournis par Android : activité native, NFC/NDEF, notifications,
 clavier, sélection de fichiers et installation des mises à jour. Les calculs,
 les écrans et les règles de pointage restent dans le moteur C.
 
-La version 2.0.3 garde les boutons de validation et d'annulation visibles pendant
-un import, tandis que la liste des journées défile séparément. La navigation
-horizontale par glissement a été retirée ; l'agenda et les flèches servent à
-changer de journée. Elle conserve aussi les corrections de zone sûre et de CSV
-de la version précédente.
+La version 2.0.4 applique la zone sûre et le positionnement relatif à tous les
+écrans, y compris les formulaires, les analyses et les longues listes. Les
+écrans défilants gardent désormais leurs coordonnées sans mise en page
+automatique parasite. Le menu a été réorganisé en groupes lisibles, les actions
+longues occupent toute la largeur et la page principale reprend la hiérarchie
+visuelle sobre de l'ancienne interface Android.
 
 ## Fonctionnement
 
