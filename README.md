@@ -2,20 +2,24 @@
 
 Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
-## Version 2.0.4
+## Version 2.0.5
 
-L'interface et le moteur métier de la version 2.0.4 sont écrits en C avec
+L'interface et le moteur métier de la version 2.0.5 sont écrits en C avec
 AromaUI. Il n'y a plus de code Kotlin. Un petit pont Java reste nécessaire pour
 les services fournis par Android : activité native, NFC/NDEF, notifications,
 clavier, sélection de fichiers et installation des mises à jour. Les calculs,
 les écrans et les règles de pointage restent dans le moteur C.
 
-La version 2.0.4 applique la zone sûre et le positionnement relatif à tous les
+La version 2.0.5 applique la zone sûre et le positionnement relatif à tous les
 écrans, y compris les formulaires, les analyses et les longues listes. Les
 écrans défilants gardent désormais leurs coordonnées sans mise en page
 automatique parasite. Le menu a été réorganisé en groupes lisibles, les actions
 longues occupent toute la largeur et la page principale reprend la hiérarchie
 visuelle sobre de l'ancienne interface Android.
+
+La version 2.0.5 ajoute des cartes distinctes pour la semaine, le mois, le
+bilan hebdomadaire et le solde. L'icône d'agenda originale ouvre directement
+le calendrier C.
 
 ## Fonctionnement
 
@@ -87,7 +91,7 @@ Chaque page d'archive indique le solde de récupération atteint à la fin de ce
 
 ## Import des relevés
 
-Le menu **Importer l'agenda** accepte les fichiers Excel `.xlsx` ou `.xlsm`, les CSV et les fichiers texte. Les photos et les PDF scannés sont volontairement exclus : ils demandent un OCR, qui peut déplacer une valeur d'une ligne à l'autre. Pour Excel, la colonne **Payé Jour** est prioritaire et les colonnes **Effectifs Jour** et **HS normale semaine** ne sont jamais importées à sa place. L'ancien format binaire `.xls` doit être enregistré en `.xlsx`.
+Le menu **Importer l'agenda** accepte les fichiers Excel `.xlsx` ou `.xlsm`, les CSV, les fichiers texte et une capture d'écran d'une journée. Pour une capture, la reconnaissance est locale et les heures détectées restent modifiables avant validation. Si la date est lisible dans la capture, l'import remplace uniquement les pointages de cette date. Pour Excel, la colonne **Payé Jour** est prioritaire et les colonnes **Effectifs Jour** et **HS normale semaine** ne sont jamais importées à sa place. L'ancien format binaire `.xls` doit être enregistré en `.xlsx`.
 
 Le menu **Exporter l'agenda** enregistre un CSV local détaillé avec la référence officielle, les pointages, les durées importées, l'objectif de chaque journée, son impact après la référence, le cumul et les jours restant à valider. Ce même CSV peut être choisi dans **Importer l'agenda** pour restaurer intégralement l'agenda après une réinstallation.
 
