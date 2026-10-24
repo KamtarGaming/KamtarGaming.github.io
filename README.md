@@ -2,7 +2,7 @@
 
 Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
-## Version 1.0.26
+## Version 1.0.27
 
 Cette version revient à l'application Kotlin/Java stable. Elle remplace
 directement la version C 2.0.5 grâce à un code de version supérieur, sans
