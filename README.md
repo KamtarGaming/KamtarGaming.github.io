@@ -2,4 +2,4 @@
 
 Application Android locale de suivi d'heures par un seul badge NFC NTAG216.
 
-## Version 1.0.29
+## Version 1.0.30
